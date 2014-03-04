@@ -1,7 +1,4 @@
 <?php
-
-
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -13,21 +10,20 @@
 
 	<title>Joomla! Component Generator</title>
 
-	<link rel="stylesheet" type="text/css" href="css/1140.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-	<div class="container12">
-		<div class="column12">
+	<div class="row">
+		<div class="col-md-12">
 			<h1 class="page-header">Joomla! Component Generator</h1>
 		</div>
 	</div>
 
-	<div class="container12">
-		<div class="column3">&nbsp;</div>
-		<div class="column6">
+	<div class="row">
+		<div class="col-md-3">&nbsp;</div>
+		<div class="col-md-6">
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#basic" data-toggle="tab">Basic Info</a></li>
 				<li><a href="#finish" data-toggle="tab">Finish</a></li>
@@ -64,21 +60,29 @@
 						  	<span class="input-group-addon">License</span>
 						  	<input type="text" class="form-control" placeholder="License Information" name="license" />
 						</div>
-						<div class="input-group next">
-							<button type="button" class="btn btn-primary">
+						<div class="input-group">
+						  	<span class="input-group-addon">Version</span>
+						  	<input type="text" class="form-control" placeholder="License Number" name="version" />
+						</div>
+						<div class="input-group">
+						  	<span class="input-group-addon">Description</span>
+						  	<textarea class="form-control" placeholder="Description Text" name="description"></textarea> 
+						</div>
+						<div class="input-group">
+							<button type="button" class="next btn btn-primary">
 								Next &nbsp;&rarr;
 							</button>
 						</div>
 					</div>
 					<div class="tab-pane" id="finish">
-						<div class="input-group prev">
-							<button type="button" class="btn btn-primary">
+						<div class="input-group">
+							<button type="button" class="prev btn btn-primary">
 								&larr;&nbsp; Previous
 							</button>
+							<button data-loading-text="Loading..." type="submit" class="btn btn-success">
+								Generate Component
+							</button>
 						</div>
-						<button data-loading-text="Loading..." type="submit" class="btn btn-success">
-							Generate Component
-						</button>
 					</div>
 				</div>
 			</form>
@@ -88,7 +92,7 @@
 			<!-- Alerts -->
 			<div id="messages-container"></div>
 		</div>
-		<div class="column3">&nbsp;</div>
+		<div class="col-md-3">&nbsp;</div>
 	</div>
 
 	<div id="footer">

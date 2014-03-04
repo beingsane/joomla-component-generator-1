@@ -36,7 +36,16 @@ function setNextButtons()
 {
 	$('.next').click( function ()
 	{
-		$('.nav-tabs .active').next('a').trigger('click');
+		var index = $('.nav-tabs li.active').index() + 2;
+
+		$('.nav-tabs li:nth-child(' + index + ') a').click();
+	});
+
+	$('.prev').click( function ()
+	{
+		var index = $('.nav-tabs li.active').index();
+
+		$('.nav-tabs li:nth-child(' + index + ') a').click();
 	});
 }
 
@@ -57,7 +66,7 @@ $(document).ready( function ()
 
 		var data = {};
 
-		$('#generate-component input[type="text"]').each( function()
+		$('#generate-component input[type="text"], #generate-component textarea').each( function()
 		{
 			data[$(this).attr('name')] = $(this).val();
 		});
